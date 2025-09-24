@@ -49,3 +49,8 @@ IconPacks (2025) Facebook logo icon. [Icon] Available at: https://www.iconpacks.
 Ocean 5 Strategies (2022) 8 Technical Elements of Website Design and Development. 2 June. Available at: https://www.ocean5strategies.com/8-technical-elements-of-website-design-and-development/ (Accessed: 20 August 2025).
 Kucheriavy, A. (no date) Best Examples of Website Goals and Objectives. Intechnic Corporation. 2025. Available at: https://www.intechnic.com/blog/best-examples-of-website-goals-and-objectives/ (Accessed: 20 August 2025).
 Mut-Con (2023) Business Website Goals That Are Key For Business Growth. Updated 3 August. Available at: https://blog.mut-con.co.za/online-strategy-and-web-presence/important-business-website-goals/ (Accessed: 20 August 2025).
+Möller, J. (n.d.) [Bookcase]. [Online image] Available at: https://pixabay.com/photos/id-335849/ (Accessed: 22 September 2025).
+succo (n.d.) [Description of image]. [Online image] Available at: https://pixabay.com/photos/id-802298/ (Accessed: 22 September 2025).
+Isenegger, C. (n.d.) [Switzerland landscape]. [Online image] Available at: https://pixabay.com/photos/id-4537159/ (Accessed: 22 September 2025).
+advogadoaguilar (2019) Right Advocacy Lex – attorney context. [Online image] Available at: https://pixabay.com/photos/right-advocacy-lex-attorney-jura-4703934/ (Accessed: 22 September 2025).
+Cho, W. (2017) Lady Justice statue. [Online image] Available at: https://pixabay.com/photos/justice-statue-lady-justice-2060093/ (Accessed: 22 September 2025).
