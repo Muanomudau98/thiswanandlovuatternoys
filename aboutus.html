@@ -5,23 +5,62 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="image/Logo.jpg" width="300">
-        <h1>Thiswana & Ndlovu Attorneys</h1>
-        <h3>Expert Legal Solutions. Real Impact.</h3>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="ourservice.html">Our Services</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-                <li><a href="blogs&testimonies.html">Blogs & Testimonies</a></li>
-            </ul>
-        </nav>
-    </header>
+     <header class="site-header">
+    <div class="logo-container">
+      <img src="image/Logo.jpg" alt="Logo" class="logo">
+      <div class="logo-text">
+        <h1>Thiswana & Ndlovu <br>Attorneys</h1>
+        <h3>Expert Legal Solutions. Real Impact</h3>
+      </div>
+    </div>
+
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        
+        <li>
+          <a href="ourservices.html">Our Services ▾</a>
+          <ul class="dropdown">
+            <li><a href="#">Corporate Law</a></li>
+            <li><a href="#">Civil & Criminal Law</a></li>
+            <li><a href="#">Environmental Law</a></li>
+            <li><a href="#">Intellectual Property</a></li>
+            <li><a href="#">Pro Bono Legal Aid</a></li>
+          </ul>
+        </li>
+        
+        <li>
+          <a href="aboutus.html">About Us ▾</a>
+          <ul class="dropdown">
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Our History</a></li>
+          </ul>
+        </li>
+        
+        <li>
+          <a href="contactus.html">Contact Us ▾</a>
+          <ul class="dropdown">
+            <li><a href="#">Schedule Consultation</a></li>
+            <li><a href="#">Our Location</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </li>
+        
+        <li>
+          <a href="blogs.html">Blogs ▾</a>
+          <ul class="dropdown">
+            <li><a href="#">Legal Insights</a></li>
+            <li><a href="#">Client Stories</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
     
     <main>
-    <section class="hero">
+    <section class="hero-section">
+      <div class="overlay">
       <div class="hero-text">
         
        <section id="team">
@@ -42,6 +81,7 @@
             <h2>Our History</h2>
             <p>Founded in 1992 in Johannesburg, Thiswana & Ndlovu Attorneys has grown into a respected firm with offices in Cape Town and Durban. Over the years, we have expanded our services to include Corporate Law, Intellectual Property, Environmental Law, and Pro Bono initiatives aimed at making justice accessible to all.</p>
         </section>
+      </div>
       </div>
    </section>
 
