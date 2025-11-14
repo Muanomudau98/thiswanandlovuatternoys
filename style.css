@@ -514,10 +514,10 @@ footer .social-media a:hover img {
 }
 
 #map {
-    height: 350px;
+    height: 400px;
+    width: 100%;
     margin-top: 20px;
-    border-radius: 6px;
-    overflow: hidden;
+    border-radius: 8px;
 }
 
 button, .btn {
@@ -548,17 +548,3 @@ button:hover, .btn:hover {
     }
 }
 
-@media (max-width: 480px) {
-    .gallery-img {
-        width: 100%;
-    }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-#lightbox-img {
-    animation: fadeIn 0.3s ease;
-}

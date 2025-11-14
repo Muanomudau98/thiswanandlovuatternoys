@@ -78,3 +78,33 @@ if (lightbox) {
         lightbox.style.display = "none";
     });
 }
+
+const map = L.map('map').setView([-26.2041, 28.0473], 5); 
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+const offices = [
+    {
+        name: "Johannesburg Office",
+        coords: [-26.1076, 28.0567],
+        address: "123 Legal Avenue, Sandton, Johannesburg"
+    },
+    {
+        name: "Cape Town Office",
+        coords: [-33.9249, 18.4241],
+        address: "456 Justice Street, Cape Town City Centre, Cape Town"
+    },
+    {
+        name: "Durban Office",
+        coords: [-29.8579, 31.0292],
+        address: "789 Constitution Road, Umhlanga, Durban"
+    }
+];
+
+offices.forEach(office => {
+    L.marker(office.coords)
+     .addTo(map)
+     .bindPopup(`<b>${office.name}</b><br>${office.address}`);
+});
