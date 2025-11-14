@@ -4,8 +4,8 @@
   <title>Thiswana & Ndlovu Attorneys</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
   <header class="site-header">
     <div class="logo-container">
       <img src="image/Logo.jpg" alt="Logo" class="logo">
@@ -18,7 +18,7 @@
     <nav>
       <ul class="navbar">
         <li><a href="index.html">Home</a></li>
-        
+
         <li>
           <a href="ourservices.html">Our Services ▾</a>
           <ul class="dropdown">
@@ -29,7 +29,7 @@
             <li><a href="#">Pro Bono Legal Aid</a></li>
           </ul>
         </li>
-        
+
         <li>
           <a href="aboutus.html">About Us ▾</a>
           <ul class="dropdown">
@@ -38,7 +38,7 @@
             <li><a href="#">Our History</a></li>
           </ul>
         </li>
-        
+
         <li>
           <a href="contactus.html">Contact Us ▾</a>
           <ul class="dropdown">
@@ -47,7 +47,7 @@
             <li><a href="#">FAQs</a></li>
           </ul>
         </li>
-        
+
         <li>
           <a href="blogs.html">Blogs ▾</a>
           <ul class="dropdown">
@@ -59,31 +59,83 @@
     </nav>
   </header>
 
-  <main class="hero-section">
-    <div class="overlay">
-        <h2>
-            Trusted by businesses, individuals, and communities since 1992. 
-            <br>We combine corporate and commercial law expertise with 
-            <br>a strong commitment to justice and social responsibility.
-        </h2>
-    </div>
-</main>
 
-    <footer>
-        <div class="social-media">
-            <a href="https://www.facebook.com/YourPage" target="_blank">
-                <img src="image/facebook-logo-2428.png" alt="Facebook">
-            </a>
-            <a href="https://www.twitter.com/YourProfile" target="_blank">
-                <img src="image/twitter-logo-black-outline-20846.png" alt="Twitter">
-            </a>
-            <a href="https://www.instagram.com/YourProfile" target="_blank">
-                <img src="image/instagram-logo-8869.png" alt="Instagram">
-            </a>
-            <a href="https://www.linkedin.com/in/YourProfile" target="_blank">
-                <img src="image/linkedin-logo-2430.png" alt="LinkedIn">
-            </a>
-        </div>
-    </footer>
+  <main class="hero-section fade-in">
+      <div class="overlay">
+          <h2>
+              Trusted by businesses, individuals, and communities since 1992. 
+              <br>We combine corporate and commercial law expertise with 
+              <br>a strong commitment to justice and social responsibility.
+          </h2>
+          <button id="openModal" class="btn">Book Consultation</button>
+      </div>
+  </main>
+
+
+  <section class="container">
+    <h2>Our Firm at a Glance</h2>
+
+    <div class="tabs">
+        <button class="tab-btn active" data-target="tab1">Experience</button>
+        <button class="tab-btn" data-target="tab2">Approach</button>
+        <button class="tab-btn" data-target="tab3">Clients</button>
+    </div>
+
+    <div id="tab1" class="tab-content">
+        With over 30 years of industry experience, our attorneys bring unmatched legal expertise.
+    </div>
+
+    <div id="tab2" class="tab-content" style="display:none;">
+        We combine human-centered service with strategic legal thinking.
+    </div>
+
+    <div id="tab3" class="tab-content" style="display:none;">
+        We serve corporations, entrepreneurs, government bodies, and private individuals.
+    </div>
+  </section>
+
+
+  <section class="container">
+    <h2>Why Choose Us?</h2>
+
+    <h3 class="accordion-title">Our Values</h3>
+    <div class="accordion-content">
+        We believe in integrity, transparency, and legal excellence.
+    </div>
+
+    <h3 class="accordion-title">Our Commitment</h3>
+    <div class="accordion-content">
+        We provide fair, ethical, and effective legal representation.
+    </div>
+
+    <h3 class="accordion-title">Our Promise</h3>
+    <div class="accordion-content">
+        You will always receive personalized and professional service.
+    </div>
+  </section>
+
+  <section class="container">
+    <h2>Gallery</h2>
+    <img src="image/pexels-august-de-richelieu-4427430.jpg" class="gallery-img">
+    <img src="image/pexels-ekaterina-bolovtsova-6077381.jpg" class="gallery-img">
+    <img src="image/pexels-pavel-danilyuk-8112201.jpg" class="gallery-img">
+
+    <div id="lightbox">
+      <img id="lightbox-img">
+    </div>
+  </section>
+
+  <footer>
+      <div class="social-media">
+          <a href="#"><img src="image/facebook-logo-2428.png"></a>
+          <a href="#"><img src="image/twitter-logo-black-outline-20846.png"></a>
+          <a href="#"><img src="image/instagram-logo-8869.png"></a>
+          <a href="#"><img src="image/linkedin-logo-2430.png"></a>
+      </div>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
+

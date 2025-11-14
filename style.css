@@ -379,8 +379,8 @@ footer .social-media a:hover img {
 }
 
 .accordion-title {
-    background: #1b1b1b;
-    color: #fff;
+    background:#b90c9c;
+    color: white;
     padding: 12px 15px;
     margin-top: 10px;
     cursor: pointer;
@@ -484,7 +484,7 @@ footer .social-media a:hover img {
 }
 
 .gallery-img {
-    width: 180px;
+    width: 30%;
     margin: 10px;
     cursor: pointer;
     border-radius: 6px;
@@ -546,4 +546,19 @@ button:hover, .btn:hover {
     .tabs {
         flex-direction: column;
     }
+}
+
+@media (max-width: 480px) {
+    .gallery-img {
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+#lightbox-img {
+    animation: fadeIn 0.3s ease;
 }

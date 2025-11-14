@@ -78,15 +78,3 @@ if (lightbox) {
         lightbox.style.display = "none";
     });
 }
-
-if (document.getElementById("map")) {
-    const map = L.map('map').setView([-26.2041, 28.0473], 13);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap'
-    }).addTo(map);
-
-    L.marker([-26.2041, 28.0473])
-        .addTo(map)
-        .bindPopup("Thiswana & Ndlovu Attorneys – Our Location");
-}
