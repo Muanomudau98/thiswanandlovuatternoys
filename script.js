@@ -1,6 +1,3 @@
-/*******************************
- * 1. ACCORDION
- *******************************/
 document.querySelectorAll(".accordion-title").forEach(title => {
     title.addEventListener("click", () => {
         title.classList.toggle("active");
@@ -9,11 +6,6 @@ document.querySelectorAll(".accordion-title").forEach(title => {
     });
 });
 
-
-
-/*******************************
- * 2. MODAL POPUP
- *******************************/
 const openModalBtn = document.getElementById("openModal");
 const closeModalBtn = document.getElementById("closeModal");
 const modal = document.getElementById("modal");
@@ -34,31 +26,21 @@ if (openModalBtn && closeModalBtn && modal) {
     });
 }
 
-
-
-/*******************************
- * 3. TABS
- *******************************/
 const tabs = document.querySelectorAll(".tab-btn");
 const tabContents = document.querySelectorAll(".tab-content");
 
 tabs.forEach(btn => {
     btn.addEventListener("click", () => {
-        // remove active state
+        
         tabs.forEach(b => b.classList.remove("active"));
         tabContents.forEach(c => c.style.display = "none");
 
-        // activate selected
+        
         btn.classList.add("active");
         document.getElementById(btn.dataset.target).style.display = "block";
     });
 });
 
-
-
-/*******************************
- * 4. FADE-IN SCROLL ANIMATION
- *******************************/
 const fadeElements = document.querySelectorAll(".fade-in");
 
 window.addEventListener("scroll", () => {
@@ -70,12 +52,6 @@ window.addEventListener("scroll", () => {
     });
 });
 
-
-
-/*******************************
- * 5. DOM MANIPULATION EXAMPLE
- * (Adds new FAQ items dynamically)
- *******************************/
 const addFaqBtn = document.getElementById("addFaq");
 const faqList = document.getElementById("faqList");
 
@@ -87,11 +63,6 @@ if (addFaqBtn && faqList) {
     });
 }
 
-
-
-/*******************************
- * 6. LIGHTBOX GALLERY
- *******************************/
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
@@ -108,13 +79,8 @@ if (lightbox) {
     });
 }
 
-
-
-/*******************************
- * 7. LEAFLET MAP
- *******************************/
 if (document.getElementById("map")) {
-    const map = L.map('map').setView([-26.2041, 28.0473], 13); // Sample (Johannesburg)
+    const map = L.map('map').setView([-26.2041, 28.0473], 13);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap'
