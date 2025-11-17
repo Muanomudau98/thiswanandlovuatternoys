@@ -1,142 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Thiswana & Ndlovu Attorneys</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiswana & Ndlovu Attorneys</title>
 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 
 <body>
-  <header class="site-header">
+<header class="site-header">
     <div class="logo-container">
-      <img src="image/Logo.jpg" alt="Logo" class="logo">
-      <div class="logo-text">
-        <h1>Thiswana & Ndlovu <br>Attorneys</h1>
-        <h3>Expert Legal Solutions. Real Impact</h3>
-      </div>
+        <img src="image/Logo.jpg" alt="Firm Logo" class="logo">
+        <div class="logo-text">
+            <h1>Thiswana & Ndlovu <br> Attorneys</h1>
+            <h3>Expert Legal Solutions. Real Impact.</h3>
+        </div>
     </div>
 
     <nav>
-      <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
 
-        <li>
-          <a href="ourservices.html">Our Services ▾</a>
-          <ul class="dropdown">
-            <li><a href="#">Corporate Law</a></li>
-            <li><a href="#">Civil & Criminal Law</a></li>
-            <li><a href="#">Environmental Law</a></li>
-            <li><a href="#">Intellectual Property</a></li>
-            <li><a href="#">Pro Bono Legal Aid</a></li>
-          </ul>
-        </li>
+            <li>
+                <a href="ourservices.html">Our Services ▾</a>
+                <ul class="dropdown">
+                    <li><a href="#">Corporate Law</a></li>
+                    <li><a href="#">Civil & Criminal Law</a></li>
+                    <li><a href="#">Environmental Law</a></li>
+                    <li><a href="#">Intellectual Property</a></li>
+                    <li><a href="#">Pro Bono Legal Aid</a></li>
+                </ul>
+            </li>
 
-        <li>
-          <a href="aboutus.html">About Us ▾</a>
-          <ul class="dropdown">
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Our Mission</a></li>
-            <li><a href="#">Our History</a></li>
-          </ul>
-        </li>
+            <li>
+                <a href="aboutus.html">About Us ▾</a>
+                <ul class="dropdown">
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Our History</a></li>
+                </ul>
+            </li>
 
-        <li>
-          <a href="contactus.html">Contact Us ▾</a>
-          <ul class="dropdown">
-            <li><a href="#">Schedule Consultation</a></li>
-            <li><a href="#">Our Location</a></li>
-            <li><a href="#">FAQs</a></li>
-          </ul>
-        </li>
+            <li>
+                <a href="contactus.html">Contact Us ▾</a>
+                <ul class="dropdown">
+                    <li><a href="#">Schedule Consultation</a></li>
+                    <li><a href="#">Our Location</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </li>
 
-        <li>
-          <a href="blogs.html">Blogs ▾</a>
-          <ul class="dropdown">
-            <li><a href="#">Legal Insights</a></li>
-            <li><a href="#">Client Stories</a></li>
-          </ul>
-        </li>
-      </ul>
+            <li>
+                <a href="blogs.html">Blogs ▾</a>
+                <ul class="dropdown">
+                    <li><a href="#">Legal Insights</a></li>
+                    <li><a href="#">Client Stories</a></li>
+                </ul>
+            </li>
+        </ul>
     </nav>
-  </header>
+</header>
 
+<main>
 
-  <main class="hero-section fade-in">
-      <div class="overlay">
-          <h2>
-              Trusted by businesses, individuals, and communities since 1992. 
-              <br>We combine corporate and commercial law expertise with 
-              <br>a strong commitment to justice and social responsibility.
-          </h2>
-          <button id="openModal" class="btn">Book Consultation</button>
-      </div>
-  </main>
+    <section class="hero-section fade-in">
+        <div class="overlay">
+            <h2>
+                Trusted by businesses, individuals, and communities since 1992. <br>
+                We combine corporate and commercial law expertise with <br>
+                a strong commitment to justice and social responsibility.
+            </h2>
+            <button id="openModal" class="btn">Book Consultation</button>
+        </div>
+    </section>
 
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Book Your Consultation</h3>
 
-  <section class="container">
-    <h2>Our Firm at a Glance</h2>
+            <form action="/submit-consultation" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-    <div class="tabs">
-        <button class="tab-btn active" data-target="tab1">Experience</button>
-        <button class="tab-btn" data-target="tab2">Approach</button>
-        <button class="tab-btn" data-target="tab3">Clients</button>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="topic">Consultation Topic</label>
+                    <select id="topic" name="topic" required>
+                        <option value="" disabled selected>Select an area of law</option>
+                        <option value="corporate law">Corporate Law</option>
+                        <option value="civil & criminal law">Civil & Criminal Law</option>
+                        <option value="environmental law">Environmental Law</option>
+                        <option value="intellectual law">Intellectual Law</option>
+                        <option value="pro bono legal aid">Pro Bono Legal Aid</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Briefly describe your need</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn submit-btn">Request Booking</button>
+            </form>
+        </div>
     </div>
 
-    <div id="tab1" class="tab-content">
-        With over 30 years of industry experience, our attorneys bring unmatched legal expertise.
+    <section class="container location-gallery-section" style="padding-top: 40px;">
+        <div class="gallery-column">
+            <h2>Our Firm at a Glance</h2>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-target="tab1">Experience</button>
+                <button class="tab-btn" data-target="tab2">Approach</button>
+                <button class="tab-btn" data-target="tab3">Clients</button>
+            </div>
+
+            <div id="tab1" class="tab-content">
+                With more than 30 years of experience in the legal industry, our attorneys offer unmatched expertise, combining deep knowledge, strategic insight, and a proven track record to deliver exceptional legal solutions tailored to each client’s unique needs.
+            </div>
+
+            <div id="tab2" class="tab-content" style="display:none;">
+                We blend human-centered service with strategic legal expertise, ensuring that our clients not only feel supported and understood but also benefit from carefully crafted solutions designed to achieve the best possible outcomes.
+            </div>
+
+            <div id="tab3" class="tab-content" style="display:none;">
+                Our services cater to a diverse range of clients, including corporations, entrepreneurs, government bodies, and private individuals.
+            </div>
+        </div>
+    </section>
+
+    <hr>
+<section id="contact-why-wrapper">
+
+    <div class="form-container">
+        <h3>Send a Direct Inquiry</h3>
+        <form>
+            <label for="cname">Name:</label>
+            <input type="text" id="cname" required>
+
+            <label for="cemail">Email:</label>
+            <input type="email" id="cemail" required>
+
+            <label for="cmessage">Message:</label>
+            <textarea id="cmessage" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
     </div>
 
-    <div id="tab2" class="tab-content" style="display:none;">
-        We combine human-centered service with strategic legal thinking.
+    <div class="why-container">
+        <h2>Why Choose Us?</h2>
+
+        <h3 class="accordion-title">Our Values</h3>
+        <div class="accordion-content">
+            We are guided by a commitment to integrity and transparency legal practice. <br>
+            .
+        </div>
+
+        <h3 class="accordion-title">Our Commitment</h3>
+        <div class="accordion-content">
+            With over 30 years of experience, we deliver unmatched legal expertise. <br>
+            .
+        </div>
+
+        <h3 class="accordion-title">Our Promise</h3>
+        <div class="accordion-content">
+            We ensure every client receives professional and personalized service. <br>
+            .
+        </div>
     </div>
+</section>
 
-    <div id="tab3" class="tab-content" style="display:none;">
-        We serve corporations, entrepreneurs, government bodies, and private individuals.
+<hr>
+</main>
+
+<footer>
+    <div class="social-media">
+        <a href="#"><img src="image/facebook-logo-2428.png" alt="Facebook"></a>
+        <a href="#"><img src="image/twitter-logo-black-outline-20846.png" alt="Twitter"></a>
+        <a href="#"><img src="image/instagram-logo-8869.png" alt="Instagram"></a>
+        <a href="#"><img src="image/linkedin-logo-2430.png" alt="LinkedIn"></a>
     </div>
-  </section>
+</footer>
 
+<script src="script.js"></script>
 
-  <section class="container">
-    <h2>Why Choose Us?</h2>
+<button id="openModal" class="btn">Open Contact Form</button>
 
-    <h3 class="accordion-title">Our Values</h3>
-    <div class="accordion-content">
-        We believe in integrity, transparency, and legal excellence.
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+
+        <h2>Contact Us</h2>
+        <form id="popupForm">
+            <input type="text" placeholder="Your Full Name" required>
+            <input type="email" placeholder="Your Email Address" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
     </div>
-
-    <h3 class="accordion-title">Our Commitment</h3>
-    <div class="accordion-content">
-        We provide fair, ethical, and effective legal representation.
-    </div>
-
-    <h3 class="accordion-title">Our Promise</h3>
-    <div class="accordion-content">
-        You will always receive personalized and professional service.
-    </div>
-  </section>
-
-  <section class="container">
-    <h2>Gallery</h2>
-    <img src="image/pexels-august-de-richelieu-4427430.jpg" class="gallery-img">
-    <img src="image/pexels-ekaterina-bolovtsova-6077381.jpg" class="gallery-img">
-    <img src="image/pexels-pavel-danilyuk-8112201.jpg" class="gallery-img">
-
-    <div id="lightbox">
-      <img id="lightbox-img">
-    </div>
-  </section>
-
-  <footer>
-      <div class="social-media">
-          <a href="#"><img src="image/facebook-logo-2428.png"></a>
-          <a href="#"><img src="image/twitter-logo-black-outline-20846.png"></a>
-          <a href="#"><img src="image/instagram-logo-8869.png"></a>
-          <a href="#"><img src="image/linkedin-logo-2430.png"></a>
-      </div>
-  </footer>
-
-  <script src="script.js"></script>
-
+</div>
 </body>
 </html>
-
