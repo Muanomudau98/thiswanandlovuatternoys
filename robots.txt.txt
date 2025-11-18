@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /temp/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /submit-consultation
+
+Sitemap: https://www.thiswanandlovuatternoys.com/sitemap.xml
