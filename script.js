@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-    /* ---------------- ACCORDION ---------------- */
     document.querySelectorAll(".accordion-title").forEach(title => {
         title.addEventListener("click", () => {
             title.classList.toggle("active");
@@ -9,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    /* ---------------- MODAL ---------------- */
     const openModalBtn = document.getElementById("openModal");
     const modal = document.getElementById("myModal");
     const closeModalBtn = document.querySelector(".close-btn");
@@ -26,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ---------------- TABS ---------------- */
     const tabs = document.querySelectorAll(".tab-btn");
     const tabContents = document.querySelectorAll(".tab-content");
 
@@ -41,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    /* ---------------- FADE-IN ---------------- */
     const fadeElements = document.querySelectorAll(".fade-in");
     const checkFade = () => {
         fadeElements.forEach(el => {
@@ -53,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("load", checkFade);
     checkFade();
 
-    /* ---------------- LIGHTBOX ---------------- */
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
 
@@ -69,10 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (e.target === lightbox) lightbox.style.display = "none";
         });
     }
-
-    /* ============================================================
-       NEW CLEAN SLIDESHOW — (THIS IS THE ONLY ONE THAT SHOULD RUN)
-       ============================================================ */
 
     let slideIndex = 0;
     const slides = document.querySelectorAll(".slide");
@@ -97,11 +87,9 @@ document.addEventListener("DOMContentLoaded", () => {
         showSlide(slideIndex);
     }
 
-    // Start slideshow
     showSlide(slideIndex);
     setInterval(autoSlide, 5000);
 
-    // Controls
     if (prevBtn) prevBtn.addEventListener("click", () => showSlide(slideIndex - 1));
     if (nextBtn) nextBtn.addEventListener("click", () => showSlide(slideIndex + 1));
 
@@ -109,50 +97,41 @@ document.addEventListener("DOMContentLoaded", () => {
         dot.addEventListener("click", () => showSlide(idx));
     });
 
-});
-let slideIndex = 0;
-showSlides(slideIndex);
+    const mapContainer = document.getElementById("map");
+    if (mapContainer) {
 
-// Next/Previous controls
-document.querySelector('.prev').addEventListener('click', () => {
-    showSlides(slideIndex -= 1);
-});
+        const map = L.map("map").setView([-26.2041, 28.0473], 5);
 
-document.querySelector('.next').addEventListener('click', () => {
-    showSlides(slideIndex += 1);
-});
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
 
-// Dot controls
-document.querySelectorAll('.dot').forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        showSlides(slideIndex = index);
-    });
-});
+        const offices = [
+            {
+                name: "Johannesburg Office",
+                coords: [-26.1076, 28.0567],
+                address: "123 Legal Avenue, Sandton, Johannesburg"
+            },
+            {
+                name: "Cape Town Office",
+                coords: [-33.9249, 18.4241],
+                address: "456 Justice Street, Cape Town City Centre, Cape Town"
+            },
+            {
+                name: "Durban Office",
+                coords: [-29.8579, 31.0292],
+                address: "789 Constitution Road, Umhlanga, Durban"
+            }
+        ];
 
-function showSlides(n) {
-    let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("dot");
+        offices.forEach(office => {
+            L.marker(office.coords)
+                .addTo(map)
+                .bindPopup(`<b>${office.name}</b><br>${office.address}`);
+        });
 
-    if (n >= slides.length) { slideIndex = 0; }
-    if (n < 0) { slideIndex = slides.length - 1; }
-
-    // Hide all slides
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        const bounds = L.latLngBounds(offices.map(o => o.coords));
+        map.fitBounds(bounds, { padding: [50, 50] });
     }
 
-    // Remove "active" from all dots
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("active");
-    }
-
-    // Show current slide + activate dot
-    slides[slideIndex].style.display = "block";
-    dots[slideIndex].classList.add("active");
-}
-
-// Auto-slide every 5 seconds
-setInterval(() => {
-    slideIndex++;
-    showSlides(slideIndex);
-}, 5000);
+});

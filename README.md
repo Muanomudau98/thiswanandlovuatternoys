@@ -54,3 +54,23 @@ succo (n.d.) [Description of image]. [Online image] Available at: https://pixaba
 Isenegger, C. (n.d.) [Switzerland landscape]. [Online image] Available at: https://pixabay.com/photos/id-4537159/ (Accessed: 22 September 2025).
 advogadoaguilar (2019) Right Advocacy Lex – attorney context. [Online image] Available at: https://pixabay.com/photos/right-advocacy-lex-attorney-jura-4703934/ (Accessed: 22 September 2025).
 Cho, W. (2017) Lady Justice statue. [Online image] Available at: https://pixabay.com/photos/justice-statue-lady-justice-2060093/ (Accessed: 22 September 2025).
+
+POE Submission
+Muano Mudau
+ST10493914
+
+Key changes.
+Interactive elements: Dropdown menus were added for navigation using JavaScript for smooth user interaction without relying on frameworks like jQuery.
+Interactive map: OpenLayers was used to create a dynamic map showing office locations with clickable markers and smooth zoom animations.
+Animations and transitions: CSS and OpenLayers’ animation methods provided smooth transitions for menus and map interactions.
+Advanced DOM Manipulation: JavaScript dynamically created map popups and linked UI elements to map features for an interactive experience.
+Gallery and lightbox: While a lightbox gallery was not implemented, social media icons are present, and adding a lightbox feature could be a future enhancement.
+
+POE Reference
+Richelieu, A. (n.d.) *Layers in an Office* [Photograph]. Pexels. Available at: [https://www.pexels.com/photo/layers-in-an-office-4427428/](https://www.pexels.com/photo/layers-in-an-office-4427428/) (Accessed: 18 November 2025).
+Richelieu, A. (n.d.) *Lawyers Posing for a Photo* [Photograph]. Pexels. Available at: [https://www.pexels.com/photo/lawyers-posing-for-a-photo-4427430/](https://www.pexels.com/photo/lawyers-posing-for-a-photo-4427430/) (Accessed: 18 November 2025).
+Danilyuk, P. (n.d.) *Themis Sculpture with Libra* [Photograph]. Pexels. Available at: [https://www.pexels.com/photo/themis-sculpture-with-libra-8112201/](https://www.pexels.com/photo/themis-sculpture-with-libra-8112201/) (Accessed: 18 November 2025).
+Bolovtsova, K. (n.d.) *A Figurine of the Lady Justice on the Table of a Judge* [Photograph]. Pexels. Available at: [https://www.pexels.com/photo/a-figurine-of-the-lady-justice-on-the-table-of-a-judge-6077381/](https://www.pexels.com/photo/a-figurine-of-the-lady-justice-on-the-table-of-a-judge-6077381/) (Accessed: 18 November 2025).
+Bolovtsova, K. (n.d.) *Close-up View of a Text on a Paper Beside a Gavel* [Photograph]. Pexels. Available at: [https://www.pexels.com/photo/close-up-view-of-a-text-on-a-paper-beside-a-gavel-6077448/](https://www.pexels.com/photo/close-up-view-of-a-text-on-a-paper-beside-a-gavel-6077448/) (Accessed: 18 November 2025).
+Bolovtsova, K. (n.d.) *Judge Signing on the Papers* [Photograph]. Pexels. Available at: [https://www.pexels.com/photo/judge-signing-on-the-papers-6077447/](https://www.pexels.com/photo/judge-signing-on-the-papers-6077447/) (Accessed: 18 November 2025).
+Pixabay (n.d.) *Black Pen Placed on White Paper* [Photograph]. Pexels. Available at: [https://www.pexels.com/photo/black-pen-placed-on-white-paper-261679/](https://www.pexels.com/photo/black-pen-placed-on-white-paper-261679/) (Accessed: 18 November 2025).
